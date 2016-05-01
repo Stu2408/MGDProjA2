@@ -20,25 +20,52 @@ function create() {
 
     game.add.sprite(0, 0, 'title');
     game.add.sprite(0, 150, 'board');
-    game.add.sprite(3, 153, 'switch');
+    //game.add.sprite(3, 153, 'switch');
 
 
     board = new SwitchBoard();
 
-    slider = board.getSwitch(0);
-
-    //game.add.sprite(slider.getPosOn(), slider.getPosOn().Phaser.Point.y, 'switch');
-
-    if(slider.getIsOnZZZ())
+    for(var i = 0; i < 5; i++)
     {
-        game.add.sprite(slider.getPosOn().x, slider.getPosOn().y, 'switch');
+        slider = board.getSwitch(i);
+
+
+        slider.isOn = false;
+        //game.add.sprite(slider.getPosOn(), slider.getPosOn().Phaser.Point.y, 'switch');
+
+        if(slider.getIsOnZZZ())
+        {
+            var on = game.add.sprite(slider.getPosOn().x, slider.getPosOn().y, 'switch');
+            on.inputEnabled = true;
+            on.events.onInputDown.add(function(){console.log('working');
+                if(!on.isOn)
+                    on = game.add.sprite(slider.getPosOff().x, slider.getPosOff().y, 'switch')});
+        }
+        else
+        {
+            var off = game.add.sprite(slider.getPosOff().x, slider.getPosOff().y, 'switch');
+            off.inputEnabled = true;
+            off.events.onInputDown.add(function(){console.log('working');
+            off = game.add.sprite(slider.getPosOn().x, slider.getPosOn().y, 'switch');});
+        }
     }
-    else
-    {
-        game.add.sprite(slider.getPosOff().x, slider.getPosOff().y, 'switch');
-    }
+
+/*    on.inputEnabled = true;
+    on.event.onInputDown.add(update, this);
+    off.inputEnabled = true;
+    off.event.onInputDown.add(update, this);*/
+
 }
 
 function update() {
     board.update();
+
+    if(slider.getIsOnZZZ())
+    {
+        if(!slider.isOn)
+            slider.posOff;
+        else
+            slider.posOn;
+    }
+
 }

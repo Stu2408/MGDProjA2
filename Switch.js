@@ -30,6 +30,16 @@ Switch.prototype.getIsOnZZZ = function()
 {
     return this.isOn;
 };
+
+
+Switch.prototype.switchState = function()
+{
+    if(!this.isOn)
+        this.posOff;
+    else
+        this.posOn;
+    //this.isOn = !this.isOn;
+};
 /*Switch.prototype.init = function(objGame)
 {
     if(this.isOn)
