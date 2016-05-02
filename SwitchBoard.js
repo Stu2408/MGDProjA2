@@ -11,30 +11,23 @@ function SwitchBoard ()
    // this.switches[switchCount] = Switch();
 
     switches[0] = new Switch(new Phaser.Point(3, 153),
-                             new Phaser.Point(3, 303));
+                             new Phaser.Point(3, 303), Math.random());
 
 
     switches[1] = new Switch(new Phaser.Point(68, 153),
-                             new Phaser.Point(68, 303));
+                             new Phaser.Point(68, 303), Math.random());
 
 
     switches[2] = new Switch(new Phaser.Point(133, 153),
-                             new Phaser.Point(133, 303));
+                             new Phaser.Point(133, 303), Math.random());
 
 
     switches[3] = new Switch(new Phaser.Point(196, 153),
-                             new Phaser.Point(196, 303));
+                             new Phaser.Point(196, 303), Math.random());
 
 
     switches[4] = new Switch(new Phaser.Point(263, 153),
-                             new Phaser.Point(263, 303));
-
-
-    /*    this.switches = [
-            new Switch(Phaser.Point(50, 250),
-                       Phaser.Point(50, 300))
-        ];*/
-
+                             new Phaser.Point(263, 303), Math.random());
 
 }
 
@@ -44,25 +37,37 @@ SwitchBoard.prototype.getSwitch = function(id)
     //return this.switches[id];
 };
 
-SwitchBoard.prototype.update = function()
+var flag = false;
+
+SwitchBoard.prototype.update = function(arrSprite)
 {
-    for(var i = 0; i < this.switchCount; i++){
-        switches[i].update(); // this.
-    }
+    for(var i = 0; i < this.switchCount; i++) {
+        switches[i].update(arrSprite[i]); // this.
 
-    if(game.input.activePointer.isDown)
-    {
-        console.log(game.input.x, game.input.y);
-        var minX = 3;
-        var maxX = 27;
-        var minY = 302;
-        var maxY = 332;
-
-        if(game.input.x > minX && game.input.x < maxX &&
-            game.input.y > minY && game.input.y < maxY)
+        if(game.input.activePointer.isDown)
         {
-            switches[0].switchState()
+            console.log(game.input.x, game.input.y);
+            var minX = 0;//3;
+            var maxX = 500;//27;
+            var minY = 0;//302;
+            var maxY = 500;//332;
+
+            //console.log("mouse btn press");
+
+            if(game.input.x > minX && game.input.x < maxX &&
+                game.input.y > minY && game.input.y < maxY) {
+                if (flag == false) {
+                    flag = true;
+
+                    switches[i].switchState();
+                    console.log("first switch switched");
+                }
+            }
         }
     }
 
+    if(game.input.activePointer.isUp) {
+
+        flag = false;
+    }
 };

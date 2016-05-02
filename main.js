@@ -6,7 +6,7 @@
 
 var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
 
-var board, slider;
+var board, spr1, spr2, spr3, spr4, spr5;
 
 function preload() {
     game.load.image('board', 'images/blankboard.png');
@@ -15,6 +15,10 @@ function preload() {
 
 
 }
+
+var sprSwitch1, sprSwitch2, sprSwitch3, sprSwitch4, sprSwitch5;
+
+var btn1, btn2, btn3, btn4, btn5;
 
 function create() {
 
@@ -27,29 +31,80 @@ function create() {
 
     for(var i = 0; i < 5; i++)
     {
-        slider = board.getSwitch(i);
+        spr1 = board.getSwitch(0);
+        spr2 = board.getSwitch(1);
+        spr3 = board.getSwitch(2);
+        spr4 = board.getSwitch(3);
+        spr5 = board.getSwitch(4);
 
-
-        slider.isOn = false;
+        //slider.isOn = false;
         //game.add.sprite(slider.getPosOn(), slider.getPosOn().Phaser.Point.y, 'switch');
-
-        if(slider.getIsOnZZZ())
+        switch(i)
         {
-            var on = game.add.sprite(slider.getPosOn().x, slider.getPosOn().y, 'switch');
-            on.inputEnabled = true;
-            on.events.onInputDown.add(function(){console.log('working');
-                if(!on.isOn)
-                    on = game.add.sprite(slider.getPosOff().x, slider.getPosOff().y, 'switch')});
-        }
-        else
-        {
-            var off = game.add.sprite(slider.getPosOff().x, slider.getPosOff().y, 'switch');
-            off.inputEnabled = true;
-            off.events.onInputDown.add(function(){console.log('working');
-            off = game.add.sprite(slider.getPosOn().x, slider.getPosOn().y, 'switch');});
+            case 0:
+                if(spr1.getIsOnZZZ()){
+                    sprSwitch1 = game.add.sprite(spr1.getPosOn().x, spr1.getPosOn().y, 'switch');
+                }
+                else {
+                    sprSwitch1 = game.add.sprite(spr1.getPosOff().x, spr1.getPosOff().y, 'switch');
+                }
+                break;
+            case 1:
+                if(spr2.getIsOnZZZ()){
+                    sprSwitch2 = game.add.sprite(spr2.getPosOn().x, spr2.getPosOn().y, 'switch');
+                }
+                else {
+                    sprSwitch2 = game.add.sprite(spr2.getPosOff().x, spr2.getPosOff().y, 'switch');
+                }
+                break;
+            case 2:
+                if(spr3.getIsOnZZZ()){
+                    sprSwitch3 = game.add.sprite(spr3.getPosOn().x, spr3.getPosOn().y, 'switch');
+                }
+                else {
+                    sprSwitch3 = game.add.sprite(spr3.getPosOff().x, spr3.getPosOff().y, 'switch');
+                }
+                break;
+            case 3:
+                if(spr4.getIsOnZZZ()){
+                    sprSwitch4 = game.add.sprite(spr4.getPosOn().x, spr4.getPosOn().y, 'switch');
+                }
+                else {
+                    sprSwitch4 = game.add.sprite(spr4.getPosOff().x, spr4.getPosOff().y, 'switch');
+                }
+                break;
+            case 4:
+                if(spr5.getIsOnZZZ()){
+                    sprSwitch5 = game.add.sprite(spr5.getPosOn().x, spr5.getPosOn().y, 'switch');
+                }
+                else {
+                    sprSwitch5 = game.add.sprite(spr5.getPosOff().x, spr5.getPosOff().y, 'switch');
+                }
+                break;
         }
     }
 
+    /*if(slider.getIsOnZZZ())
+    {
+        var on = game.add.sprite(slider.getPosOn().x, slider.getPosOn().y, 'switch');
+        on.inputEnabled = true;
+        if(on.events.onInputDown.add(function(){
+            console.log('working');
+                on = game.add.sprite(slider.getPosOff().x, slider.getPosOff().y, 'switch')}));
+        else
+            on = game.r.sprite(slider.getPosOn().x, slider.getPosOn().y, 'switch');
+    }
+    else
+    {
+        var off = game.add.sprite(slider.getPosOff().x, slider.getPosOff().y, 'switch');
+        off.inputEnabled = true;
+        off.events.onInputDown.add(function(){
+            console.log('working');/*
+            if(off.isOn)
+            off = game.add.sprite(slider.getPosOff().x, slider.getPosOff().y, 'switch');
+            else*/
+            /*off = game.add.sprite(slider.getPosOn().x, slider.getPosOn().y, 'switch');});
+    }*/
 /*    on.inputEnabled = true;
     on.event.onInputDown.add(update, this);
     off.inputEnabled = true;
@@ -58,14 +113,25 @@ function create() {
 }
 
 function update() {
-    board.update();
+    var myArr = new Array();
+    myArr.push(sprSwitch1);
+    myArr.push(sprSwitch2);
+    myArr.push(sprSwitch3);
+    myArr.push(sprSwitch4);
+    myArr.push(sprSwitch5);
+    board.update(myArr);
+    console.log(myArr.length);
 
-    if(slider.getIsOnZZZ())
+  /*  if(!myArr.isOn)
+        myArr.switchState();
+    else
+        myArr.switchState();*/
+
+    /*if(slider.getIsOnZZZ())
     {
         if(!slider.isOn)
-            slider.posOff;
+            slider.switchState();
         else
-            slider.posOn;
-    }
-
+            slider.switchState();
+    }*/
 }
