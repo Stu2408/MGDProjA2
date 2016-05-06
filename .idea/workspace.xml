@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8b6dcffb-b806-42e9-b812-ae574ee25e37" name="Default" comment="">
+    <list default="true" id="8b6dcffb-b806-42e9-b812-ae574ee25e37" name="Default" comment="testing multiplayer added new textures, now to implement them.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/join.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/p1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/p1wins.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/p2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/p2wins.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/p3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/p3wins.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/p4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/p4wins.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/p5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/p5wins.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/p6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/p6wins.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
     </list>
     <ignored path="SwitchBoardPhaser.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -327,14 +339,20 @@
       <option name="project" value="LOCAL" />
       <updated>1462569900589</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="testing multiplayer added new textures, now to implement them.">
+      <created>1462572758383</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1462572758383</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13382508" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13382508" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -369,7 +387,8 @@
     <MESSAGE value="Buttons randomly generating at different position, still unable to get the sprite to move at all, getting extremely frustratin at this stage with another submission and 2 more exams in the next few days and this now officially being late." />
     <MESSAGE value="Buttons now funtional and moving on click to the correct locations, now to sart implementing firebase..." />
     <MESSAGE value="testing multiplayer" />
-    <option name="LAST_COMMIT_MESSAGE" value="testing multiplayer" />
+    <MESSAGE value="testing multiplayer added new textures, now to implement them." />
+    <option name="LAST_COMMIT_MESSAGE" value="testing multiplayer added new textures, now to implement them." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
