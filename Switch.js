@@ -2,8 +2,7 @@
  * Created by Tyrion on 01/05/2016.
  */
 
-function Switch(newPosOn, newPosOff, newIsOn)
-{
+function Switch(newPosOn, newPosOff, newIsOn){
     this.posOn = newPosOn;
     this.posOff = newPosOff;
 
@@ -12,12 +11,10 @@ function Switch(newPosOn, newPosOff, newIsOn)
     else
         this.isOn = true;
 
-    if(this.isOn)
-        this.currPos = this.posOn;
+    if (this.isOn)
+        this.spr = game.add.sprite( this.posOn.x,  this.posOn.y, 'switch');
     else
-        this.currPos = this.posOff;
-
-    this.flag = false;
+        this.spr = game.add.sprite( this.posOff.x,  this.posOff.y, 'switch');
 }
 
 Switch.prototype.getPosOn = function()
@@ -35,50 +32,23 @@ Switch.prototype.getIsOnZZZ = function()
     return this.isOn;
 };
 
-
 Switch.prototype.switchState = function()
 {
-    console.log(this.isOn);
     if(!this.isOn)
         this.isOn = true;
     else
         this.isOn = false;
-    console.log(this.isOn);
-
 };
 
-Switch.prototype.update = function(spr)
+Switch.prototype.update = function()
 {
     if(this.isOn) //if the button is now set to on
     {
-        spr.y = this.posOn.y;
+        this.spr.y = this.posOn.y;
     }
     else if (!this.isOn)
     {
-        spr.y = this.posOff.y;
+        this.spr.y = this.posOff.y;
     }
-
-/*    if(this.isOn) //if the button is now set to on
-    {
-        if(this.currPos.y != this.posOn.y)
-        {
-            console.log("on");
-            this.currPos.y = this.posOn.y;
-            console.log(this.posOn.y);
-            console.log(this.posOff.y);
-            spr.y = this.posOn.y;
-        }
-    }
-    else if (!this.isOn)
-    {
-        if (this.currPos.y != this.posOff.y)
-        {
-            console.log("off");
-            this.currPos.y = this.posOff.y;
-            console.log(this.posOn.y);
-            console.log(this.posOff.y);
-            spr.y = this.posOff.y;
-        }
-    }*/
 };
 

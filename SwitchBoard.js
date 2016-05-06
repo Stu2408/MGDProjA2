@@ -2,70 +2,54 @@
  * Created by Tyrion on 01/05/2016.
  */
 
-var switches = [];
-
-
-function SwitchBoard ()
-{
+function SwitchBoard (x,y){
+    this.switches = [];
     this.switchCount = 5;
-   // this.switches[switchCount] = Switch();
+    game.add.sprite(x, y, 'board');
+    this.switches[0] = new Switch(new Phaser.Point(x+3, y+3),
+                             new Phaser.Point(x+3, y+153), Math.random());
 
-    switches[0] = new Switch(new Phaser.Point(3, 153),
-                             new Phaser.Point(3, 303), Math.random());
+    this.switches[1] = new Switch(new Phaser.Point(x+68, y+3),
+                             new Phaser.Point(x+68, y+153), Math.random());
 
+    this.switches[2] = new Switch(new Phaser.Point(x+133, y+3),
+                             new Phaser.Point(x+133, y+153), Math.random());
 
-    switches[1] = new Switch(new Phaser.Point(68, 153),
-                             new Phaser.Point(68, 303), Math.random());
+    this.switches[3] = new Switch(new Phaser.Point(x+196, y+3),
+                             new Phaser.Point(x+196, y+153), Math.random());
 
-
-    switches[2] = new Switch(new Phaser.Point(133, 153),
-                             new Phaser.Point(133, 303), Math.random());
-
-
-    switches[3] = new Switch(new Phaser.Point(196, 153),
-                             new Phaser.Point(196, 303), Math.random());
-
-
-    switches[4] = new Switch(new Phaser.Point(263, 153),
-                             new Phaser.Point(263, 303), Math.random());
-
+    this.switches[4] = new Switch(new Phaser.Point(x+263, y+3),
+                             new Phaser.Point(x+263, y+153), Math.random());
 }
 
-SwitchBoard.prototype.getSwitch = function(id)
-{
-    return switches[id];
-    //return this.switches[id];
+SwitchBoard.prototype.compare = function(goal){
+    var comparison = true;
+    for (var i = 0; i<this.switchCount ; i++){
+        if (!this.switches[i].isOn === goal.switches[i].isOn)
+            comparison = false;
+    }
+
+    return comparison;
 };
 
-var flag = false;
+SwitchBoard.prototype.update = function(){
 
-SwitchBoard.prototype.update = function(arrSprite)
-{
     for(var i = 0; i < this.switchCount; i++) {
-
-
         if(game.input.activePointer.isDown)
         {
-            if (switches[i].isOn) {
-                if (game.input.x > switches[i].posOn.x && game.input.x < (switches[i].posOn.x + 24)&&
-                    game.input.y > switches[i].posOn.y && game.input.y < (switches[i].posOn.y + 30) ) {
-                    switches[i].switchState();
-                    console.log("switched "+i+" to off");
+            if (this.switches[i].isOn) {
+                if (game.input.x > this.switches[i].posOn.x && game.input.x < (this.switches[i].posOn.x + 24)&&
+                    game.input.y > this.switches[i].posOn.y && game.input.y < (this.switches[i].posOn.y + 30) ) {
+                    this.switches[i].switchState();
                 }
             }
-            else if (!switches[i].isOn){
-                if (game.input.x > switches[i].posOff.x && game.input.x < (switches[i].posOff.x + 24) &&
-                    game.input.y > switches[i].posOff.y && game.input.y < (switches[i].posOff.y + 30) ){
-                    switches[i].switchState();
-                    console.log("switched "+i+" to on");
+            else if (!this.switches[i].isOn){
+                if (game.input.x > this.switches[i].posOff.x && game.input.x < (this.switches[i].posOff.x + 24) &&
+                    game.input.y > this.switches[i].posOff.y && game.input.y < (this.switches[i].posOff.y + 30) ){
+                    this.switches[i].switchState();
                 }
             }
         }
-        switches[i].update(arrSprite[i]); // this.
-    }
-
-    if(game.input.activePointer.isUp) {
-
-        flag = false;
+        this.switches[i].update(); // this.
     }
 };

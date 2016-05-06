@@ -3,41 +3,6 @@
  */
 
 
-
-var fb = new Firebase("https://switchboardmgd.firebaseio.com/"),
-    locations = { },
-    result_box = document.getElementById("result");
-if (fb) {
-    // This gets a reference to the 'location" node.
-    var fbLocation = fb.child("/location");
-    // Now we can install event handlers for nodes added, changed and removed.
-    fbLocation.on('child_added', function(sn){
-        var data = sn.val();
-        console.dir({'added': data});
-        locations[sn.key()] = data;
-        //showLocations();
-    });
-    fbLocation.on('child_changed', function(sn){
-        var data = sn.val();
-        locations[sn.key()] = data;
-        console.dir({'moved': data})
-        // showLocations();
-    });
-    fbLocation.on('child_removed', function(sn){
-        var data = sn.val();
-        delete locations[sn.key()];
-        console.dir(({'removed': data}));
-        //  showLocations();
-    });
-}
-
-
-var EState = {
-    Lobby : 0,
-    Game : 0
-};
-var currentState = EState.Lobby;
-
 function randName(){
     var i = 0;
     while(getKey(i)){
@@ -45,6 +10,8 @@ function randName(){
     }
     return i;
 }
+
+
 
 function getKey(name){
     var loc;
@@ -56,18 +23,28 @@ function getKey(name){
     return null;
 }
 
-function addLocation(name){
+function addLocation(name,taken){
     //to prevent a duplicate name occurring
     if(getKey(name)) return;
     //name is valid, continue to add it
     fb.child("/location").push({
         player: name,
+        taken: taken,
         timestamp: Firebase.ServerValue.TIMESTAMP
     }, function(err){
         if(err) console.dir(err);
     });
 }
 
+function updateLocation(ref, name, taken){
+     fb.child("/location/" + ref).set({
+         player: name,
+         taken: taken,
+         timestamp: Firebase.ServerValue.TIMESTAMP
+     }, function(err) {
+        if(err) console.dir(err);
+     });
+ }
 
 function removeLocation(ref){
     fb.child("/location/" +ref).set(null, function(err){
@@ -75,77 +52,29 @@ function removeLocation(ref){
     });
 }
 
-
-
-document.getElementById("ready").addEventListener("click", function(){
-//document.getElementById("canvas").onmouseup = function(evt) {
-    var name;
-    name = randName();
-    //if(currentState == my.namespace.EState.Lobby){
-    if(name < 6) {
-        if (!getKey(name)) {
-            addLocation(name);
-        }
-    }
-    else // if name > 6
-    {
-        console.log("Player failed to join the game as game is full");
-        alert("Game is full!")
-    }
-
-    if(name == 5)
-    {
-        currentState = EState.Game;
-    }
-});
-
-
 var context;
-
-var board = new Board();
 
 var isRunning = true;
 
-function run()
-{
+function run(){
     console.log('main loop');
     while(isRunning)
     {
-
         update();
         draw();
     }
 }
+/*
 
-function update()
-{
-    if(currentState === EState.Game && isBoardLoaded && isSwitchLoaded)
-    {
-        board.update();
-    }
+function update(){
+    board.update();
 }
 
-function draw()
-{
+function draw(){
     console.log("before");
     if(currentState === EState.Game && isBoardLoaded && isSwitchLoaded)
     {
         console.log("wheeey");
         board.draw();
     }
-}
-
-window.onload = function(){
-    context = document.getElementById("canvas").getContext("2d");
-    console.log('wheeey');
-    board.loadAssets("images/blankboard.png", "images/switch.png", function(){
-        console.log("wheeey");
-        run();
-    });
-};
-
-document.getElementById("exit").addEventListener("click", function(){
-    var name;
-    name = document.getElementById('name').value;
-    removeLocation(getKey(name));
-});
+}*/
