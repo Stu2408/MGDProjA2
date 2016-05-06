@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8b6dcffb-b806-42e9-b812-ae574ee25e37" name="Default" comment="testing multiplayer added new textures, now to implement them.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/join.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/p1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/p1wins.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/p2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/p2wins.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/p3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/p3wins.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/p4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/p4wins.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/p5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/p5wins.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/p6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/p6wins.png" />
+    <list default="true" id="8b6dcffb-b806-42e9-b812-ae574ee25e37" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
     </list>
     <ignored path="SwitchBoardPhaser.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,31 +26,19 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/main.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="1.8614525">
-                  <caret line="127" column="35" selection-start-line="127" selection-start-column="35" selection-end-line="127" selection-end-column="35" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="172" column="58" selection-start-line="172" selection-start-column="58" selection-end-line="172" selection-end-column="58" />
                   <folding>
                     <element signature="e#0#43#0" expanded="false" />
-                    <element signature="e#2158#2770#0" expanded="false" />
-                    <element signature="e#3243#3465#0" expanded="false" />
+                    <element signature="e#2108#2163#0" expanded="false" />
+                    <element signature="e#2168#2780#0" expanded="false" />
+                    <element signature="e#2785#3247#0" expanded="false" />
+                    <element signature="e#3253#3475#0" expanded="false" />
                   </folding>
                 </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="join.png" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/images/join.png">
-              <provider selected="true" editor-type-id="images">
-                <state />
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="switch.png" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/images/switch.png">
-              <provider selected="true" editor-type-id="images">
-                <state />
               </provider>
             </entry>
           </file>
@@ -82,17 +58,17 @@
           <file leaf-file-name="Switch.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Switch.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-21.655172">
-                  <caret line="46" column="16" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="16" />
+                <state vertical-scroll-proportion="-22.862068">
+                  <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="firebase.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="firebase.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/firebase.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
+                <state vertical-scroll-proportion="0.34189945">
                   <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
                   <folding>
                     <element signature="n#!!doc;n#randName#0" expanded="false" />
@@ -345,14 +321,20 @@
       <option name="project" value="LOCAL" />
       <updated>1462572758383</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="testing multiplayer added new textures, now to implement them.">
+      <created>1462572809010</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1462572809010</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13382508" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13382508" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -403,8 +385,10 @@
           <caret line="127" column="30" selection-start-line="124" selection-start-column="2" selection-end-line="127" selection-end-column="30" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
-            <element signature="e#2158#2770#0" expanded="false" />
-            <element signature="e#3243#3465#0" expanded="false" />
+            <element signature="e#2108#2163#0" expanded="false" />
+            <element signature="e#2168#2780#0" expanded="false" />
+            <element signature="e#2785#3247#0" expanded="false" />
+            <element signature="e#3253#3475#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -466,8 +450,10 @@
           <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
-            <element signature="e#2158#2770#0" expanded="false" />
-            <element signature="e#3243#3465#0" expanded="false" />
+            <element signature="e#2108#2163#0" expanded="false" />
+            <element signature="e#2168#2780#0" expanded="false" />
+            <element signature="e#2785#3247#0" expanded="false" />
+            <element signature="e#3253#3475#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -529,8 +515,10 @@
           <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
-            <element signature="e#2158#2770#0" expanded="false" />
-            <element signature="e#3243#3465#0" expanded="false" />
+            <element signature="e#2108#2163#0" expanded="false" />
+            <element signature="e#2168#2780#0" expanded="false" />
+            <element signature="e#2785#3247#0" expanded="false" />
+            <element signature="e#3253#3475#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -615,7 +603,15 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/join.png">
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.019562716">
+          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/p1.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -623,6 +619,19 @@
     <entry file="file://$PROJECT_DIR$/images/switch.png">
       <provider selected="true" editor-type-id="images">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/join.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Switch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.862068">
+          <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SwitchBoard.js">
@@ -636,43 +645,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Switch.js">
+    <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.655172">
-          <caret line="46" column="16" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="16" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="172" column="58" selection-start-line="172" selection-start-column="58" selection-end-line="172" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+            <element signature="e#2108#2163#0" expanded="false" />
+            <element signature="e#2168#2780#0" expanded="false" />
+            <element signature="e#2785#3247#0" expanded="false" />
+            <element signature="e#3253#3475#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/firebase.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.34189945">
           <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
           <folding>
             <element signature="n#!!doc;n#randName#0" expanded="false" />
             <element signature="n#!!block;n#removeLocation#0" expanded="false" />
             <element signature="n#!!block;n#run#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.8614525">
-          <caret line="127" column="35" selection-start-line="127" selection-start-column="35" selection-end-line="127" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-            <element signature="e#2158#2770#0" expanded="false" />
-            <element signature="e#3243#3465#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.019562716">
-          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>

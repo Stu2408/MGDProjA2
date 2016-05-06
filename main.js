@@ -46,19 +46,24 @@ function preload() {
     game.load.image('title', 'images/title2.bmp');
     game.load.image('join', 'images/join.png');
 
-    game.load.image('p1', 'images/p1.png');
-    game.load.image('p2', 'images/p2.png');
-    game.load.image('p3', 'images/p3.png');
-    game.load.image('p4', 'images/p4.png');
-    game.load.image('p5', 'images/p5.png');
-    game.load.image('p6', 'images/p6.png');
 
-    game.load.image('p1win', 'images/p1win.png');
-    game.load.image('p2win', 'images/p2win.png');
-    game.load.image('p3win', 'images/p3win.png');
-    game.load.image('p4win', 'images/p4win.png');
-    game.load.image('p5win', 'images/p5win.png');
-    game.load.image('p6win', 'images/p6win.png');
+    game.load.image('p1', 'images/p1.png');
+    game.load.image('p1win', 'images/p1wins.png');
+
+    game.load.image('p2', 'images/p2.png');
+    game.load.image('p2win', 'images/p2wins.png');
+
+    game.load.image('p3', 'images/p3.png');
+    game.load.image('p3win', 'images/p3wins.png');
+
+    game.load.image('p4', 'images/p4.png');
+    game.load.image('p4win', 'images/p4wins.png');
+
+    game.load.image('p5', 'images/p5.png');
+    game.load.image('p5win', 'images/p5wins.png');
+
+    game.load.image('p6', 'images/p6.png');
+    game.load.image('p6win', 'images/p6wins.png');
 
     updateLocation("player1",'0',false);
     updateLocation("player2",'0',false);
@@ -66,7 +71,6 @@ function preload() {
     updateLocation("player4",'0',false);
     updateLocation("player5",'0',false);
     updateLocation("player6",'0',false);
-
 
     /*addLocation('0',false);
     addLocation('1',false);*/
@@ -134,9 +138,43 @@ function create() {
 function update() {
     board.update();
     updateLocation(playerName,'0',true);
+    if(playerName == "player1")
+        game.add.sprite(325,200,'p1');
+    else if(playerName == "player2")
+        game.add.sprite(325,200,'p2');
+    else if(playerName == "player3")
+        game.add.sprite(325,200,'p3');
+    else if(playerName == "player4")
+        game.add.sprite(325,200,'p4');
+    else if(playerName == "player5")
+        game.add.sprite(325,200,'p5');
+    else if(playerName == "player6")
+        game.add.sprite(325,200,'p6');
+
 
     if (board.compare(goal))
         console.log(playerName + " MATCHED!");
+
+    if (board.compare(goal) && playerName == "player1"){
+        game.add.sprite(325,200,'p1win');
+    }
+    else if (board.compare(goal) && playerName == "player2"){
+        game.add.sprite(325,200,'p2win');
+    }
+    else if (board.compare(goal) && playerName == "player3"){
+        game.add.sprite(325,200,'p3win');
+    }
+    else if (board.compare(goal) && playerName == "player4"){
+        game.add.sprite(325,200,'p4win');
+    }
+    else if (board.compare(goal) && playerName == "player5"){
+        game.add.sprite(325,200,'p5win');
+    }
+    else if (board.compare(goal) && playerName == "player6"){
+        game.add.sprite(325,200,'p6win');
+    }
+
+
 }
 
 function join() {
