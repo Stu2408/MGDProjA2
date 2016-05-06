@@ -44,6 +44,22 @@ function preload() {
     game.load.image('board', 'images/blankboard.png');
     game.load.image('switch', 'images/switch.png');
     game.load.image('title', 'images/title2.bmp');
+    game.load.image('join', 'images/join.png');
+
+    game.load.image('p1', 'images/p1.png');
+    game.load.image('p2', 'images/p2.png');
+    game.load.image('p3', 'images/p3.png');
+    game.load.image('p4', 'images/p4.png');
+    game.load.image('p5', 'images/p5.png');
+    game.load.image('p6', 'images/p6.png');
+
+    game.load.image('p1win', 'images/p1win.png');
+    game.load.image('p2win', 'images/p2win.png');
+    game.load.image('p3win', 'images/p3win.png');
+    game.load.image('p4win', 'images/p4win.png');
+    game.load.image('p5win', 'images/p5win.png');
+    game.load.image('p6win', 'images/p6win.png');
+
     updateLocation("player1",'0',false);
     updateLocation("player2",'0',false);
     updateLocation("player3",'0',false);
@@ -111,7 +127,7 @@ function create() {
 
     board = new SwitchBoard(0,150);
     goal = new SwitchBoard(500,150);
-    game.add.button(390,480,'switch',join,this);
+    game.add.button(364,480,'join',join,this);
 
 }
 

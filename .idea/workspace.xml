@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8b6dcffb-b806-42e9-b812-ae574ee25e37" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
     </list>
     <ignored path="SwitchBoardPhaser.iws" />
@@ -30,14 +29,28 @@
           <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/main.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.7530726">
-                  <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+                <state vertical-scroll-proportion="1.8614525">
+                  <caret line="127" column="35" selection-start-line="127" selection-start-column="35" selection-end-line="127" selection-end-column="35" />
                   <folding>
                     <element signature="e#0#43#0" expanded="false" />
-                    <element signature="e#1543#2155#0" expanded="false" />
-                    <element signature="e#2628#2850#0" expanded="false" />
+                    <element signature="e#2158#2770#0" expanded="false" />
+                    <element signature="e#3243#3465#0" expanded="false" />
                   </folding>
                 </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="join.png" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/images/join.png">
+              <provider selected="true" editor-type-id="images">
+                <state />
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="switch.png" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/images/switch.png">
+              <provider selected="true" editor-type-id="images">
+                <state />
               </provider>
             </entry>
           </file>
@@ -57,7 +70,7 @@
           <file leaf-file-name="Switch.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Switch.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-26.965517">
+                <state vertical-scroll-proportion="-21.655172">
                   <caret line="46" column="16" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="16" />
                   <folding />
                 </state>
@@ -85,8 +98,8 @@
           <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.6260069">
-                  <caret line="32" column="54" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="57" />
+                <state vertical-scroll-proportion="0.019562716">
+                  <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
                   <folding />
                 </state>
               </provider>
@@ -308,7 +321,13 @@
       <option name="project" value="LOCAL" />
       <updated>1462569122432</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="testing multiplayer">
+      <created>1462569900589</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1462569900589</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -365,8 +384,8 @@
           <caret line="127" column="30" selection-start-line="124" selection-start-column="2" selection-end-line="127" selection-end-column="30" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
-            <element signature="e#1543#2155#0" expanded="false" />
-            <element signature="e#2628#2850#0" expanded="false" />
+            <element signature="e#2158#2770#0" expanded="false" />
+            <element signature="e#3243#3465#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -428,8 +447,8 @@
           <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
-            <element signature="e#1543#2155#0" expanded="false" />
-            <element signature="e#2628#2850#0" expanded="false" />
+            <element signature="e#2158#2770#0" expanded="false" />
+            <element signature="e#3243#3465#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -491,8 +510,8 @@
           <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
-            <element signature="e#1543#2155#0" expanded="false" />
-            <element signature="e#2628#2850#0" expanded="false" />
+            <element signature="e#2158#2770#0" expanded="false" />
+            <element signature="e#3243#3465#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -548,11 +567,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/switch.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/phaser.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -582,6 +596,16 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/images/join.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/switch.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SwitchBoard.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -595,7 +619,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Switch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-26.965517">
+        <state vertical-scroll-proportion="-21.655172">
           <caret line="46" column="16" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="16" />
           <folding />
         </state>
@@ -613,23 +637,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6260069">
-          <caret line="32" column="54" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="57" />
-          <folding />
+        <state vertical-scroll-proportion="1.8614525">
+          <caret line="127" column="35" selection-start-line="127" selection-start-column="35" selection-end-line="127" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+            <element signature="e#2158#2770#0" expanded="false" />
+            <element signature="e#3243#3465#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7530726">
-          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-            <element signature="e#1543#2155#0" expanded="false" />
-            <element signature="e#2628#2850#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.019562716">
+          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
