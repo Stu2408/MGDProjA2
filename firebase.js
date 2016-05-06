@@ -11,8 +11,6 @@ function randName(){
     return i;
 }
 
-
-
 function getKey(name){
     var loc;
     for(loc in locations){

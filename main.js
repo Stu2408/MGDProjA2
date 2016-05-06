@@ -47,6 +47,10 @@ function preload() {
     game.load.image('join', 'images/join.png');
 
 
+    game.load.image('player', 'images/player.png');
+    game.load.image('goal', 'images/goal.png');
+
+
     game.load.image('p1', 'images/p1.png');
     game.load.image('p1win', 'images/p1wins.png');
 
@@ -128,9 +132,11 @@ function preload() {
 function create() {
     game.physics.startSystem(Phaser.Physics.ARCADE);
     game.add.sprite(0, 0, 'title');
+    game.add.sprite(109, 335, 'player');
+    game.add.sprite(619, 335, 'goal');
 
     board = new SwitchBoard(0,150);
-    goal = new SwitchBoard(500,150);
+    goal = new SwitchBoard(510,150);
     game.add.button(364,480,'join',join,this);
 
 }
