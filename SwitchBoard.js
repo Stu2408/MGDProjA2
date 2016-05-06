@@ -42,28 +42,26 @@ var flag = false;
 SwitchBoard.prototype.update = function(arrSprite)
 {
     for(var i = 0; i < this.switchCount; i++) {
-        switches[i].update(arrSprite[i]); // this.
+
 
         if(game.input.activePointer.isDown)
         {
-            console.log(game.input.x, game.input.y);
-            var minX = 0;//3;
-            var maxX = 500;//27;
-            var minY = 0;//302;
-            var maxY = 500;//332;
-
-            //console.log("mouse btn press");
-
-            if(game.input.x > minX && game.input.x < maxX &&
-                game.input.y > minY && game.input.y < maxY) {
-                if (flag == false) {
-                    flag = true;
-
+            if (switches[i].isOn) {
+                if (game.input.x > switches[i].posOn.x && game.input.x < (switches[i].posOn.x + 24)&&
+                    game.input.y > switches[i].posOn.y && game.input.y < (switches[i].posOn.y + 30) ) {
                     switches[i].switchState();
-                    console.log("first switch switched");
+                    console.log("switched "+i+" to off");
+                }
+            }
+            else if (!switches[i].isOn){
+                if (game.input.x > switches[i].posOff.x && game.input.x < (switches[i].posOff.x + 24) &&
+                    game.input.y > switches[i].posOff.y && game.input.y < (switches[i].posOff.y + 30) ){
+                    switches[i].switchState();
+                    console.log("switched "+i+" to on");
                 }
             }
         }
+        switches[i].update(arrSprite[i]); // this.
     }
 
     if(game.input.activePointer.isUp) {

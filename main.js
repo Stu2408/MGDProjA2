@@ -18,14 +18,12 @@ function preload() {
 
 var sprSwitch1, sprSwitch2, sprSwitch3, sprSwitch4, sprSwitch5;
 
-var btn1, btn2, btn3, btn4, btn5;
-
 function create() {
+
+    game.physics.startSystem(Phaser.Physics.ARCADE);
 
     game.add.sprite(0, 0, 'title');
     game.add.sprite(0, 150, 'board');
-    //game.add.sprite(3, 153, 'switch');
-
 
     board = new SwitchBoard();
 
@@ -60,6 +58,7 @@ function create() {
             case 2:
                 if(spr3.getIsOnZZZ()){
                     sprSwitch3 = game.add.sprite(spr3.getPosOn().x, spr3.getPosOn().y, 'switch');
+
                 }
                 else {
                     sprSwitch3 = game.add.sprite(spr3.getPosOff().x, spr3.getPosOff().y, 'switch');
@@ -84,32 +83,6 @@ function create() {
         }
     }
 
-    /*if(slider.getIsOnZZZ())
-    {
-        var on = game.add.sprite(slider.getPosOn().x, slider.getPosOn().y, 'switch');
-        on.inputEnabled = true;
-        if(on.events.onInputDown.add(function(){
-            console.log('working');
-                on = game.add.sprite(slider.getPosOff().x, slider.getPosOff().y, 'switch')}));
-        else
-            on = game.r.sprite(slider.getPosOn().x, slider.getPosOn().y, 'switch');
-    }
-    else
-    {
-        var off = game.add.sprite(slider.getPosOff().x, slider.getPosOff().y, 'switch');
-        off.inputEnabled = true;
-        off.events.onInputDown.add(function(){
-            console.log('working');/*
-            if(off.isOn)
-            off = game.add.sprite(slider.getPosOff().x, slider.getPosOff().y, 'switch');
-            else*/
-            /*off = game.add.sprite(slider.getPosOn().x, slider.getPosOn().y, 'switch');});
-    }*/
-/*    on.inputEnabled = true;
-    on.event.onInputDown.add(update, this);
-    off.inputEnabled = true;
-    off.event.onInputDown.add(update, this);*/
-
 }
 
 function update() {
@@ -120,18 +93,5 @@ function update() {
     myArr.push(sprSwitch4);
     myArr.push(sprSwitch5);
     board.update(myArr);
-    console.log(myArr.length);
-
-  /*  if(!myArr.isOn)
-        myArr.switchState();
-    else
-        myArr.switchState();*/
-
-    /*if(slider.getIsOnZZZ())
-    {
-        if(!slider.isOn)
-            slider.switchState();
-        else
-            slider.switchState();
-    }*/
+    //console.log(myArr.length);
 }
