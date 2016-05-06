@@ -111,10 +111,8 @@ function create() {
 
     board = new SwitchBoard(0,150);
     goal = new SwitchBoard(500,150);
+    game.add.button(390,480,'switch',join,this);
 
-    console.log(getEmpty(false));
-    playerName = getEmpty(false);
-    console.log(playerName);
 }
 
 function update() {
@@ -123,4 +121,11 @@ function update() {
 
     if (board.compare(goal))
         console.log(playerName + " MATCHED!");
+}
+
+function join() {
+    console.log(getEmpty(false));
+    playerName = getEmpty(false);
+    console.log(playerName);
+    updateLocation(playerName,'0',true);
 }
