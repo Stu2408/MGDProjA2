@@ -24,7 +24,7 @@ if (fb) {
 
 var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
 
-var playerName;
+var playerName = null;
 var board, goal;
 
 function getEmpty(taken) {
@@ -142,50 +142,59 @@ function create() {
 }
 
 function update() {
-    board.update();
-    updateLocation(playerName,'0',true);
-    if(playerName == "player1")
-        game.add.sprite(325,200,'p1');
-    else if(playerName == "player2")
-        game.add.sprite(325,200,'p2');
-    else if(playerName == "player3")
-        game.add.sprite(325,200,'p3');
-    else if(playerName == "player4")
-        game.add.sprite(325,200,'p4');
-    else if(playerName == "player5")
-        game.add.sprite(325,200,'p5');
-    else if(playerName == "player6")
-        game.add.sprite(325,200,'p6');
+    if (playerName !=null) {
+        board.update();
+        updateLocation(playerName, '0', true);
+        if (playerName == "player1")
+            game.add.sprite(325, 200, 'p1');
+        else if (playerName == "player2")
+            game.add.sprite(325, 200, 'p2');
+        else if (playerName == "player3")
+            game.add.sprite(325, 200, 'p3');
+        else if (playerName == "player4")
+            game.add.sprite(325, 200, 'p4');
+        else if (playerName == "player5")
+            game.add.sprite(325, 200, 'p5');
+        else if (playerName == "player6")
+            game.add.sprite(325, 200, 'p6');
 
 
-    if (board.compare(goal))
-        console.log(playerName + " MATCHED!");
+        if (board.compare(goal))
+            console.log(playerName + " MATCHED!");
 
-    if (board.compare(goal) && playerName == "player1"){
-        game.add.sprite(325,200,'p1win');
+        if (board.compare(goal) && playerName == "player1") {
+            game.add.sprite(325, 200, 'p1win');
+        }
+        else if (board.compare(goal) && playerName == "player2") {
+            game.add.sprite(325, 200, 'p2win');
+        }
+        else if (board.compare(goal) && playerName == "player3") {
+            game.add.sprite(325, 200, 'p3win');
+        }
+        else if (board.compare(goal) && playerName == "player4") {
+            game.add.sprite(325, 200, 'p4win');
+        }
+        else if (board.compare(goal) && playerName == "player5") {
+            game.add.sprite(325, 200, 'p5win');
+        }
+        else if (board.compare(goal) && playerName == "player6") {
+            game.add.sprite(325, 200, 'p6win');
+        }
     }
-    else if (board.compare(goal) && playerName == "player2"){
-        game.add.sprite(325,200,'p2win');
-    }
-    else if (board.compare(goal) && playerName == "player3"){
-        game.add.sprite(325,200,'p3win');
-    }
-    else if (board.compare(goal) && playerName == "player4"){
-        game.add.sprite(325,200,'p4win');
-    }
-    else if (board.compare(goal) && playerName == "player5"){
-        game.add.sprite(325,200,'p5win');
-    }
-    else if (board.compare(goal) && playerName == "player6"){
-        game.add.sprite(325,200,'p6win');
-    }
-
 
 }
 
 function join() {
     console.log(getEmpty(false));
-    playerName = getEmpty(false);
-    console.log(playerName);
-    updateLocation(playerName,'0',true);
+    if (playerName==null) {
+        playerName = getEmpty(false);
+        console.log(playerName);
+        updateLocation(playerName, '0', true);
+    }
+    else {
+        updateLocation(playerName, '0', false);
+        playerName = getEmpty(false);
+        console.log(playerName);
+        updateLocation(playerName, '0', true);
+    }
 }
