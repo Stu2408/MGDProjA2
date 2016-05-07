@@ -29,8 +29,8 @@
           <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/main.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.8822171">
-                  <caret line="200" column="0" selection-start-line="200" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.9018476">
+                  <caret line="180" column="31" selection-start-line="180" selection-start-column="31" selection-end-line="180" selection-end-column="31" />
                   <folding>
                     <element signature="e#0#43#0" expanded="false" />
                     <element signature="e#2217#2272#0" expanded="false" />
@@ -346,14 +346,20 @@
       <option name="project" value="LOCAL" />
       <updated>1462576000752</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Players updating correctly i think as they join, displaying which player you are when you join and if you win when you board matches but not when an opponent wins...">
+      <created>1462579372696</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1462579372696</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13382508" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13382508" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -390,7 +396,8 @@
     <MESSAGE value="testing multiplayer" />
     <MESSAGE value="testing multiplayer added new textures, now to implement them." />
     <MESSAGE value="Player name and winning appearing, just need to update accross all players at this stage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Player name and winning appearing, just need to update accross all players at this stage" />
+    <MESSAGE value="Players updating correctly i think as they join, displaying which player you are when you join and if you win when you board matches but not when an opponent wins..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Players updating correctly i think as they join, displaying which player you are when you join and if you win when you board matches but not when an opponent wins..." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -684,8 +691,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8822171">
-          <caret line="200" column="0" selection-start-line="200" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.9018476">
+          <caret line="180" column="31" selection-start-line="180" selection-start-column="31" selection-end-line="180" selection-end-column="31" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
             <element signature="e#2217#2272#0" expanded="false" />

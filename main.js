@@ -163,22 +163,22 @@ function update() {
             console.log(playerName + " MATCHED!");
 
         if (board.compare(goal) && playerName == "player1") {
-            game.add.sprite(325, 200, 'p1win');
+            game.add.sprite(365, 200, 'p1win');
         }
         else if (board.compare(goal) && playerName == "player2") {
-            game.add.sprite(325, 200, 'p2win');
+            game.add.sprite(365, 200, 'p2win');
         }
         else if (board.compare(goal) && playerName == "player3") {
-            game.add.sprite(325, 200, 'p3win');
+            game.add.sprite(365, 200, 'p3win');
         }
         else if (board.compare(goal) && playerName == "player4") {
-            game.add.sprite(325, 200, 'p4win');
+            game.add.sprite(365, 200, 'p4win');
         }
         else if (board.compare(goal) && playerName == "player5") {
-            game.add.sprite(325, 200, 'p5win');
+            game.add.sprite(365, 200, 'p5win');
         }
         else if (board.compare(goal) && playerName == "player6") {
-            game.add.sprite(325, 200, 'p6win');
+            game.add.sprite(365, 200, 'p6win');
         }
     }
 
